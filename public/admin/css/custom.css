@@ -1,0 +1,21 @@
+div.dataTables_paginate {
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+    height: 50px;
+}
+div.dataTables_filter {
+
+    text-align: right;
+
+}
+#addCompetition{
+  margin-top:10px;
+}
+
+#wrapper{
+height: 100vh;
+}
+div#page-wrapper{
+  height: 100%;
+}

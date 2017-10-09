@@ -4,7 +4,6 @@
  * Configuration for DEVELOPMENT environment
  * To create another configuration set just copy this file to config.production.php etc. You get the idea :)
  */
-
 /**
  * Configuration for: Error reporting
  * Useful to show every little problem during development, but only show hard / no errors in production.
@@ -38,13 +37,19 @@ return array(
      * Configuration for: Folders
      * Usually there's no reason to change this.
      */
-    'PATH_CONTROLLER' => realpath(dirname(__FILE__).'/../../') . '/application/controller/',
-    'PATH_VIEW' => realpath(dirname(__FILE__).'/../../') . '/application/view/',
+    'PATH_CONTROLLER' => realpath(dirname(__FILE__) . '/../../') . '/application/controller/',
+    'PATH_VIEW' => realpath(dirname(__FILE__) . '/../../') . '/application/view/',
+    /**
+     * Configuration for: Folders
+     * Usually there's no reason to change this.
+     */
+    'PATH_CONTROLLER_ADMIN' => realpath(dirname(__FILE__) . '/../../') . '/application/controller/admin/',
+    'PATH_VIEW_ADMIN' => realpath(dirname(__FILE__) . '/../../') . '/application/view/admin/',
     /**
      * Configuration for: Avatar paths
      * Internal path to save avatars. Make sure this folder is writable. The slash at the end is VERY important!
      */
-    'PATH_AVATARS' => realpath(dirname(__FILE__).'/../../') . '/public/avatars/',
+    'PATH_AVATARS' => realpath(dirname(__FILE__) . '/../../') . '/public/avatars/',
     'PATH_AVATARS_PUBLIC' => 'avatars/',
     /**
      * Configuration for: Default controller and action

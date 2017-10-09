@@ -4,8 +4,8 @@
  * Class View
  * The part that handles all the output
  */
-class View
-{
+class View {
+
     /**
      * simply includes (=shows) the view. this is done from the controller. In the controller, you usually say
      * $this->view->render('help/index'); to show (in this example) the view index.php in the folder help.
@@ -13,8 +13,7 @@ class View
      * @param string $filename Path of the to-be-rendered view, usually folder/file(.php)
      * @param array $data Data to be used in the view
      */
-    public function render($filename, $data = null)
-    {
+    public function render($filename, $data = null) {
         if ($data) {
             foreach ($data as $key => $value) {
                 $this->{$key} = $value;
@@ -26,6 +25,19 @@ class View
         require Config::get('PATH_VIEW') . '_templates/footer.php';
     }
 
+    public function renderAdmin($filename, $data = null) {
+        if ($data) {
+            foreach ($data as $key => $value) {
+                $this->{$key} = $value;
+            }
+        }
+
+        require Config::get('PATH_VIEW_ADMIN') . '_templates/header.php';
+        require Config::get('PATH_VIEW_ADMIN') . $filename . '.php';
+        require Config::get('PATH_VIEW_ADMIN') . '_templates/footer.php';
+//        require Config::get('PATH_VIEW_ADMIN') . '/login/index.php';
+    }
+
     /**
      * Similar to render, but accepts an array of separate views to render between the header and footer. Use like
      * the following: $this->view->renderMulti(array('help/index', 'help/banner'));
@@ -33,8 +45,7 @@ class View
      * @param array $data Data to be used in the view
      * @return bool
      */
-    public function renderMulti($filenames, $data = null)
-    {
+    public function renderMulti($filenames, $data = null) {
         if (!is_array($filenames)) {
             self::render($filenames, $data);
             return false;
@@ -48,7 +59,7 @@ class View
 
         require Config::get('PATH_VIEW') . '_templates/header.php';
 
-        foreach($filenames as $filename) {
+        foreach ($filenames as $filename) {
             require Config::get('PATH_VIEW') . $filename . '.php';
         }
 
@@ -60,8 +71,7 @@ class View
      * @param string $filename Path of the to-be-rendered view, usually folder/file(.php)
      * @param mixed $data Data to be used in the view
      */
-    public function renderWithoutHeaderAndFooter($filename, $data = null)
-    {
+    public function renderWithoutHeaderAndFooter($filename, $data = null) {
         if ($data) {
             foreach ($data as $key => $value) {
                 $this->{$key} = $value;
@@ -72,11 +82,25 @@ class View
     }
 
     /**
+     * Same like render(), but does not include header and footer
+     * @param string $filename Path of the to-be-rendered view, usually folder/file(.php)
+     * @param mixed $data Data to be used in the view
+     */
+    public function renderWithoutHeaderAndFooterForAdmin($filename, $data = null) {
+        if ($data) {
+            foreach ($data as $key => $value) {
+                $this->{$key} = $value;
+            }
+        }
+
+        require Config::get('PATH_VIEW_ADMIN') . $filename . '.php';
+    }
+
+    /**
      * Renders pure JSON to the browser, useful for API construction
      * @param $data
      */
-    public function renderJSON($data)
-    {
+    public function renderJSON($data) {
         header("Content-Type: application/json");
         echo json_encode($data);
     }
@@ -84,8 +108,7 @@ class View
     /**
      * renders the feedback messages into the view
      */
-    public function renderFeedbackMessages()
-    {
+    public function renderFeedbackMessages() {
         // echo out the feedback messages (errors and success messages etc.),
         // they are in $_SESSION["feedback_positive"] and $_SESSION["feedback_negative"]
         require Config::get('PATH_VIEW') . '_templates/feedback.php';
@@ -104,8 +127,7 @@ class View
      *
      * @return bool Shows if the controller is used or not
      */
-    public static function checkForActiveController($filename, $navigation_controller)
-    {
+    public static function checkForActiveController($filename, $navigation_controller) {
         $split_filename = explode("/", $filename);
         $active_controller = $split_filename[0];
 
@@ -125,8 +147,7 @@ class View
      *
      * @return bool Shows if the action/method is used or not
      */
-    public static function checkForActiveAction($filename, $navigation_action)
-    {
+    public static function checkForActiveAction($filename, $navigation_action) {
         $split_filename = explode("/", $filename);
         $active_action = $split_filename[1];
 
@@ -146,8 +167,7 @@ class View
      *
      * @return bool
      */
-    public static function checkForActiveControllerAndAction($filename, $navigation_controller_and_action)
-    {
+    public static function checkForActiveControllerAndAction($filename, $navigation_controller_and_action) {
         $split_filename = explode("/", $filename);
         $active_controller = $split_filename[0];
         $active_action = $split_filename[1];
@@ -170,8 +190,8 @@ class View
      * @param  string $str The string.
      * @return string
      */
-    public function encodeHTML($str)
-    {
+    public function encodeHTML($str) {
         return htmlentities($str, ENT_QUOTES, 'UTF-8');
     }
+
 }

@@ -26,7 +26,7 @@ class LoginController extends Controller
             Redirect::home();
         } else {
             $data = array('redirect' => Request::get('redirect') ? Request::get('redirect') : NULL);
-            $this->View->render('login/index', $data);
+        $this->View->renderWithoutHeaderAndFooterForAdmin('/login/index', $data);
         }
     }
 
@@ -52,13 +52,13 @@ class LoginController extends Controller
             if (Request::post('redirect')) {
                 Redirect::toPreviousViewedPageAfterLogin(ltrim(urldecode(Request::post('redirect')), '/'));
             } else {
-                Redirect::to('user/index');
+                Redirect::to('dashboard/index');
             }
         } else {
             if (Request::post('redirect')) {
                 Redirect::to('login?redirect=' . ltrim(urlencode(Request::post('redirect')), '/'));
             } else {
-                Redirect::to('login/index');
+                Redirect::to('/login/index');
             }
         }
     }
@@ -84,11 +84,11 @@ class LoginController extends Controller
 
         // if login successful, redirect to dashboard/index ...
         if ($login_successful) {
-            Redirect::to('dashboard/index');
+            Redirect::to('/admin/index');
         } else {
             // if not, delete cookie (outdated? attack?) and route user to login form to prevent infinite login loops
             LoginModel::deleteCookie();
-            Redirect::to('login/index');
+            Redirect::to('/login/index');
         }
     }
 
