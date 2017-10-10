@@ -7,9 +7,9 @@
         <meta name="author" content="">
         <title><?php echo Config::get('SITE_NAME'); ?> - Website</title>
         <!-- Bootstrap core CSS -->
-        <link href="<?php echo Config::get('URL_VENDOR'); ?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo Config::get('URL'); ?>show/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom fonts for this template -->
-        <link href="<?php echo Config::get('URL_VENDOR'); ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo Config::get('URL'); ?>show/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="<?php echo Config::get('URL'); ?>css/custom.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -83,7 +83,7 @@
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <href="<?php echo Config::get('URL'); ?> class="img-fluid" src="href="<?php echo Config::get('URL'); ?>img/portfolio/01-thumbnail.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo Config::get('URL'); ?>img/portfolio/01-thumbnail.jpg" alt="">
                         </a>
                         <div class="portfolio-caption">
                             <h4>BMV 530</h4>
@@ -277,12 +277,12 @@
 
 
         <!-- Bootstrap core JavaScript -->
-        <script src="<?php echo Config::get('URL_VENDOR'); ?>jquery/jquery.min.js"></script>
-        <script src="<?php echo Config::get('URL_VENDOR'); ?>popper/popper.min.js"></script>
-        <script src="<?php echo Config::get('URL_VENDOR'); ?>bootstrap/js/bootstrap.min.js"></script>
+        <script src="<?php echo Config::get('URL'); ?>show/jquery/jquery.min.js"></script>
+        <script src="<?php echo Config::get('URL'); ?>show/popper/popper.min.js"></script>
+        <script src="<?php echo Config::get('URL'); ?>show/bootstrap/js/bootstrap.min.js"></script>
 
         <!-- Plugin JavaScript -->
-        <script src="<?php echo Config::get('URL_VENDOR'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="<?php echo Config::get('URL'); ?>show/jquery-easing/jquery.easing.min.js"></script>
 
         <!-- Contact form JavaScript -->
         <script src="<?php echo Config::get('URL'); ?>js/jqBootstrapValidation.js"></script>
