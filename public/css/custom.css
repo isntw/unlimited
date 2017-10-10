@@ -1,0 +1,40 @@
+#registerBoxButton {
+ margin-bottom: 10px;
+  
+}
+#closeButton{
+ margin: auto;
+    padding: 10px;
+}
+
+
+/*section{
+  padding-top: 0 !important;
+  padding-bottom: 100px !important;
+}
+
+section#aboutUs{
+  padding-top:100px !important;
+}*/
+
+
+#ticket-text{
+  color: white;
+  /*! z-index: -1; */ 
+  position:relative;
+  font-size: 27px; 
+  margin-top: 33px;
+
+}
+
+.checked .text-primary {
+	color: green !important;
+}
+
+input.fa{
+	visibility: hidden;
+}
+
+/*.text-primary:hover  {
+    color: green !important;
+}*/

@@ -33,6 +33,7 @@ return array(
      * URL manually. This should then look like 'http://192.168.33.44/' ! Note the slash in the end.
      */
     'URL' => 'http://' . $_SERVER['HTTP_HOST'] . str_replace('public', '', dirname($_SERVER['SCRIPT_NAME'])),
+    'URL_ADMIN' => 'http://' . $_SERVER['HTTP_HOST'] . str_replace('public', '', dirname($_SERVER['SCRIPT_NAME'])).'/admin',
     /**
      * Configuration for: Folders
      * Usually there's no reason to change this.
@@ -56,6 +57,8 @@ return array(
      */
     'DEFAULT_CONTROLLER' => 'index',
     'DEFAULT_ACTION' => 'index',
+    
+    'SITE_NAME' => 'UNLIMITED',
     /**
      * Configuration for: Database
      * DB_TYPE The used database type. Note that other types than "mysql" might break the db construction currently.
