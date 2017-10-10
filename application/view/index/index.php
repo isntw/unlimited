@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title><?php echo Config::get(''); ?> - Website</title>
+        <title><?php echo Config::get('SITE_NAME'); ?> - Website</title>
         <!-- Bootstrap core CSS -->
-        <link href="<?php echo Config::get('URL'); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo Config::get('URL_VENDOR'); ?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom fonts for this template -->
-        <link href="<?php echo Config::get('URL'); ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo Config::get('URL_VENDOR'); ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="<?php echo Config::get('URL'); ?>css/custom.css" rel="stylesheet" type="text/css">
-        <link href="<?php echo Config::get('URL'); ?>https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="<?php echo Config::get('URL'); ?>#page-top"> <?php echo Config::get('SITE_NAME'); ?> </a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"> <?php echo Config::get('SITE_NAME'); ?> </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fa fa-bars"></i>
@@ -97,7 +97,7 @@
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo Config::get('URL'); ?>img/portfolio/02-thumbnail.jpg" alt="">
                         </a>
                         <div class="portfolio-caption">
                             <h4>Iphone 7 Plus</h4>
@@ -230,13 +230,7 @@
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <!-- <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt=""> -->
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <!--       <ul class="list-inline">
-                                        <li>Date: January 2017</li>
-                                        <li>Client: Explore</li>
-                                        <li>Category: Graphic Design</li>
-                                      </ul> -->
-
-
+       
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <form id="registerForm" name="sentMessage" novalidate action="index.php" method="post">
@@ -283,12 +277,12 @@
 
 
         <!-- Bootstrap core JavaScript -->
-        <script src="<?php echo Config::get('URL'); ?>vendor/jquery/jquery.min.js"></script>
-        <script src="<?php echo Config::get('URL'); ?>vendor/popper/popper.min.js"></script>
-        <script src="<?php echo Config::get('URL'); ?>vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<?php echo Config::get('URL_VENDOR'); ?>jquery/jquery.min.js"></script>
+        <script src="<?php echo Config::get('URL_VENDOR'); ?>popper/popper.min.js"></script>
+        <script src="<?php echo Config::get('URL_VENDOR'); ?>bootstrap/js/bootstrap.min.js"></script>
 
         <!-- Plugin JavaScript -->
-        <script src="<?php echo Config::get('URL'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="<?php echo Config::get('URL_VENDOR'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
         <!-- Contact form JavaScript -->
         <script src="<?php echo Config::get('URL'); ?>js/jqBootstrapValidation.js"></script>

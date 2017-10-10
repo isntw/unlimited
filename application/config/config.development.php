@@ -33,7 +33,7 @@ return array(
      * URL manually. This should then look like 'http://192.168.33.44/' ! Note the slash in the end.
      */
     'URL' => 'http://' . $_SERVER['HTTP_HOST'] . str_replace('public', '', dirname($_SERVER['SCRIPT_NAME'])),
-    'URL_ADMIN' => 'http://' . $_SERVER['HTTP_HOST'] . str_replace('public', '', dirname($_SERVER['SCRIPT_NAME'])).'/admin',
+    'URL_VENDOR' => 'http://' . $_SERVER['HTTP_HOST'] .'/vendor/',
     /**
      * Configuration for: Folders
      * Usually there's no reason to change this.
